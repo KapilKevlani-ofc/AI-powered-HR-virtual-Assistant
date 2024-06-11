@@ -10,4 +10,3 @@ numpy
 python-dotenv
 langchain-huggingface
 PyMuPDF
-llama-index-embeddings-huggingface
