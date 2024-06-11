@@ -1,0 +1,13 @@
+langchain
+chromadb
+tiktoken
+langchain-community
+ctransformers==0.2.5 
+sentence-transformers
+pypdf
+pandas
+numpy
+python-dotenv
+langchain-huggingface
+PyMuPDF
+llama-index-embeddings-huggingface

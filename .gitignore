@@ -124,6 +124,9 @@ celerybeat.pid
 # Environments
 .env
 .venv
+virtual
+.virtual
+virtual/
 env/
 venv/
 ENV/
