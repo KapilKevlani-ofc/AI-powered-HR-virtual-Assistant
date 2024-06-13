@@ -10,3 +10,12 @@ numpy
 python-dotenv
 langchain-huggingface
 PyMuPDF
+fastembed
+deepgram-sdk
+SpeechRecognition
+asyncio==3.4.3
+PyAudio
+langchain-groq
+ffmpeg
+ffmpeg-python
+streamlit
