@@ -3,6 +3,7 @@ import shutil
 import subprocess
 import requests
 import time
+from src.components.data_ingestion import store_timings_to_csv
 class TextToSpeech:
    DG_API_KEY = os.getenv("DEEPGRAM_API_KEY")
    MODEL_NAME = "aura-asteria-en"
@@ -35,6 +36,7 @@ class TextToSpeech:
                        first_byte_time = time.time()
                        ttfb = int((first_byte_time - start_time) * 1000)
                        print(f"TTS Time to First Byte (TTFB): {ttfb}ms\n")
+                       store_timings_to_csv('Text_to_speech', ttfb)
                    player_process.stdin.write(chunk)
                    player_process.stdin.flush()
        if player_process.stdin:
