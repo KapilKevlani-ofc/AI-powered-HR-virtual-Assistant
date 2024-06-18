@@ -20,7 +20,6 @@ class Database_Manager:
            vector_store = Chroma.from_documents(
                documents=text_chunks, embedding=embeddings, persist_directory=folder_path
            )
-           vector_store.persist()
        return vector_store
    @staticmethod
    def retriever_object(vector_store):
