@@ -8,6 +8,7 @@ from langchain.chains import LLMChain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.chains import create_retrieval_chain
 from langchain.prompts import PromptTemplate
+from src.components.data_ingestion import store_timings_to_csv
 from langchain.prompts import (
    ChatPromptTemplate,
    MessagesPlaceholder,
@@ -51,4 +52,5 @@ class LanguageModelProcessor:
        self.memory.chat_memory.add_ai_message(response_text)
        elapsed_time = int((end_time - start_time) * 1000)
        print(f"LLM ({elapsed_time}ms): {response_text}")
+       store_timings_to_csv('LLM_Response', elapsed_time)
        return response_text
